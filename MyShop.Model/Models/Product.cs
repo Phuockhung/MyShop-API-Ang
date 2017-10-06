@@ -56,5 +56,7 @@ namespace TeduShop.Model.Models
         public virtual ProductCategory ProductCategory { set; get; }
 
         public virtual IEnumerable<ProductTag> ProductTags { set; get; }
+
+        public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }
 }
