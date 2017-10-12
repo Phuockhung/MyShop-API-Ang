@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace TeduShop.Data.Infrastructure
+namespace MyShop.Data.Infrastructure
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class //T có nghĩa là đại diện cho một kiểu mà chúng ta chưa biết
     {
+        //Để tạo các IRepository thì cần phải định nghĩa ra các phương thức
         // Marks an entity as new
-        T Add(T entity);
+        T Add(T entity); //Những cái tương tự như vầy được gọi là Generic (generic nó là một kiểu dữ liệu "tự do")
 
         // Marks an entity as modified
         void Update(T entity);

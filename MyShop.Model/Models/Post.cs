@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using TeduShop.Model.Abstract;
+using MyShop.Model.Abstract;
+using MyShop.Model.Models;
 
-namespace TeduShop.Model.Models
-{
+namespace MyShop.Model.Models
+{   
     [Table("Posts")]
     public class Post : Auditable
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TeduShop.Model.Models
+namespace MyShop.Model.Models
 {
     [Table("Orders")]
     public class Order
@@ -40,12 +40,6 @@ namespace TeduShop.Model.Models
         public string PaymentStatus { set; get; }
         public bool Status { set; get; }
 
-        [StringLength(128)]
-        [Column(TypeName = "nvarchar")]
-        public string CustomerId { set; get; }
-
-        [ForeignKey("CustomerId")]
-        //public virtual ApplicationUser User { set; get; }
 
         public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }

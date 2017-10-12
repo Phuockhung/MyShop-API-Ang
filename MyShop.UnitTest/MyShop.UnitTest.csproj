@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +72,7 @@
       <Name>MyShop.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyShop.Web\MyShop.Web.csproj">
-      <Project>{ec1908f1-e944-49c9-9953-8ae731c34e93}</Project>
+      <Project>{3c1a6c88-a58a-4454-a6ef-f03762657229}</Project>
       <Name>MyShop.Web</Name>
     </ProjectReference>
   </ItemGroup>

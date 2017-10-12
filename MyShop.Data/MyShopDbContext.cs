@@ -1,15 +1,15 @@
-﻿using System.Data.Entity;
-using TeduShop.Model.Models;
+﻿using MyShop.Model.Models;
+using System.Data.Entity;
 
 namespace MyShop.Data
 {
     public class MyShopDbContext : DbContext
     {
-        public MyShopDbContext() : base("MyShopConnection")
+        public MyShopDbContext() : base("MyShopConnection") //Constructor này lấy từ nguồn ConectionString
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            Configuration.LazyLoadingEnabled = false; //Ở đây khi load bảng cha thì nó không tự động include thêm bảng con
         }
-
+        //Phần khai báo bảng (Entities) có trong thư mục models ở solution model
         public DbSet<Footer> Footers { set; get; }
         public DbSet<Menu> Menus { set; get; }
         public DbSet<MenuGroup> MenuGroups { set; get; }
@@ -38,6 +38,9 @@ namespace MyShop.Data
         // public DbSet<ApplicationRole> ApplicationRoles { set; get; }
         // public DbSet<ApplicationRoleGroup> ApplicationRoleGroups { set; get; }
         // public DbSet<ApplicationUserGroup> ApplicationUserGroups { set; get; }
+
+
+        //Phương thức ghi đè lên DbContext, sẽ chạy khi chúng ta khởi tạo entities famework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             

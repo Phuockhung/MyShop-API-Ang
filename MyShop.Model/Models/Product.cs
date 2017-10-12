@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
-using TeduShop.Model.Abstract;
+using MyShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
+namespace MyShop.Model.Models
 {
     [Table("Products")]
 
@@ -56,7 +56,5 @@ namespace TeduShop.Model.Models
         public virtual ProductCategory ProductCategory { set; get; }
 
         public virtual IEnumerable<ProductTag> ProductTags { set; get; }
-
-        public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }
 }
