@@ -7,7 +7,7 @@ using System.Linq;
 namespace MyShop.Data.Reponsitories
 {
     //Định nghĩa các phương thức mà chúng ta cần phải thêm
-    public interface IProductCateogryRepository
+    public interface IProductCateogryRepository : IRepository<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }
